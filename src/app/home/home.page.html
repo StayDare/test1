@@ -1,22 +1,13 @@
-<ion-tabs>
-    <ion-router-outlet></ion-router-outlet>
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>首页</ion-title>
+    </ion-toolbar>
+</ion-header>
 
-    <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="home">
-            <ion-icon name="star-outline"></ion-icon>
-            首页
-        </ion-tab-button>
-        <ion-tab-button tab="restaurant">
-            <ion-icon name="restaurant-outline"></ion-icon>
-            中餐
-        </ion-tab-button>
-        <ion-tab-button tab="fastfood">
-            <ion-icon name="fast-food-outline"></ion-icon>
-            西餐
-        </ion-tab-button>
-        <ion-tab-button tab="milkytea">
-            <ion-icon name="search"></ion-icon>
-            奶茶饮品
-        </ion-tab-button>
-    </ion-tab-bar>
-</ion-tabs>
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">tab</ion-title>
+        </ion-toolbar>
+    </ion-header>
+</ion-content>
