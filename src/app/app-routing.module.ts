@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'restaurant',
+    loadChildren: () => import('./restaurant/restaurant.module').then( m => m.RestaurantPageModule)
+  },
+  {
+    path: 'fastfood',
+    loadChildren: () => import('./fastfood/fastfood.module').then( m => m.FastfoodPageModule)
+  },
+  {
+    path: 'milkytea',
+    loadChildren: () => import('./milkytea/milkytea.module').then( m => m.MilkyteaPageModule)
+  },
+  {
+    path: 'tab',
+    loadChildren: () => import('./tab/tab.module').then( m => m.TabPageModule)
+  },
 ];
 
 @NgModule({
