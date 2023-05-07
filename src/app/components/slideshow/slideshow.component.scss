@@ -22,14 +22,21 @@ ion-icon {
     right: 0;
 }
 
+.imgs{
+    height: 100%;
+    position: relative;
+}
+
 //items轮播图所有图片，item具体到某一图片
-.item {
+::ng-deep .item  {
     display: none;
     position: absolute;
+    width: 100%;
     height: 100%;
+    object-fit:contain;
 }
 
 //某一图片展示，他的作用就是把 显示的 css 应用到图片上去
-.show {
+::ng-deep .show  {
     display: block !important; //使他是最高优先级
 }
