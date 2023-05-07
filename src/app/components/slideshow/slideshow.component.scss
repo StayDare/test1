@@ -1,0 +1,35 @@
+.slide {
+    height: 240px;
+    width: 100%;
+}
+
+ion-icon {
+    color: rgb(95, 86, 86);
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+}
+
+//左按钮
+.button1 {
+    left: 0;
+}
+
+//右按钮
+.button2 {
+    right: 0;
+}
+
+//items轮播图所有图片，item具体到某一图片
+.item {
+    display: none;
+    position: absolute;
+    height: 100%;
+}
+
+//某一图片展示，他的作用就是把 显示的 css 应用到图片上去
+.show {
+    display: block !important; //使他是最高优先级
+}
