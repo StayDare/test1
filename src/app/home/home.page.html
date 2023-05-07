@@ -16,7 +16,9 @@
     </ion-header>
     <ion-grid>
         <ion-row>
-            <ion-title>精品推荐</ion-title>
+            <ion-col>
+                <ion-title>精品推荐</ion-title>
+            </ion-col>
         </ion-row>
         <ion-row>
             <ion-col size="6" *ngFor="let item of items">
@@ -24,4 +26,15 @@
             </ion-col>
         </ion-row>
     </ion-grid>
+    <ion-grid>
+        <ion-row>
+            <ion-title>掌上秒杀</ion-title>
+        </ion-row>
+        <ion-row></ion-row>
+    </ion-grid>
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+        <ion-fab-button size="small">
+            <ion-icon name="chevron-up"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
 </ion-content>
