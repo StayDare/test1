@@ -1,4 +1,5 @@
-import { Component, ContentChildren, OnInit, QueryList } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+
 
 @Component({
   selector: 'app-slideshow',
@@ -11,15 +12,18 @@ import { Component, ContentChildren, OnInit, QueryList } from '@angular/core';
 //class是类
 export class SlideshowComponent  implements OnInit {
   //类里面就有一个 items 用来管理传入的图片
-  @ContentChildren("*")
-  items!: QueryList<Element>;//表示声明变量,但可以不赋初始值
+  @ViewChild("items_div")
+  items_div!: ElementRef<Element>;//表示声明变量,这个变量绝对不会为空
+  items!: Element[]
   constructor() { }
 
   ngOnInit() {
-    this.items.forEach((item)=>{item.classList.add("item")});//每个 item 默认隐藏，并且位置绝对且重叠
-    this.items.get(0)?.classList.add("show");//初始化之后要展示第一张轮播图.get返回有可能为空,加问号就相当于判断是否为空，不为空执行后面的
-
   }
+  ngAfterViewInit() {
+    this.items = [].slice.call( this.items_div.nativeElement.children );
+    this.items.forEach((item)=>{item.classList.add("item")});//每个 item 默认隐藏，并且位置绝对且重叠
+    this.items[0].classList.add("show");//初始化之后要展示第一张轮播图.get返回有可能为空,加问号就相当于判断是否为空，不为空执行后面的
+}
 
 }
 
