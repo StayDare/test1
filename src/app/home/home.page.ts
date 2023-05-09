@@ -12,7 +12,7 @@ export class HomePage {
   constructor(private productService:ProductService) {
     this.items = this.productService.getProducts()
   }
-
+//一键返回顶部，是调用的 ion-content 来实现的滚动
   scrollToTop(): void {
     this.content?.scrollToTop(0);
   }
