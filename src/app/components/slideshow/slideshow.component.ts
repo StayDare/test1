@@ -11,12 +11,33 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 //class是类
 export class SlideshowComponent  implements OnInit {
+   current_index!: number;//表示当前图片的索引
   //类里面就有一个 items 用来管理传入的图片
-  @ViewChild("items_div")
+  @ViewChild("items_div")//使用items_div
   items_div!: ElementRef<Element>;//表示声明变量,这个变量绝对不会为空
   items!: Element[]
   constructor() { }
+  go_left(){
+    let to = this.current_index - 1;
+    if(to < 0){
+      to = this.items.length - 1;
+    }
+    this.switch(to);
+  }
+  go_right(){
+    let to = this.current_index + 1;
+    if(to >= this.items.length){
+      to = 0;
+    }
+    this.switch(to);
+  }
 
+  switch (to:number) {
+   // this.current_index = 0;//默认设置第一张作为开始图
+    this.items[this.current_index].classList.remove('show');
+    this.items[to].classList.add('show');
+    this.current_index = to;
+  }
   ngOnInit() {
   }
   ngAfterViewInit() {

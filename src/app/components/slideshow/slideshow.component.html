@@ -1,10 +1,14 @@
 <div class="slide">
-    <div #items_div class="imgs"><ng-content></ng-content></div>
-    <div class="button button1">
+    <!--不能用一个 * 来选择所有,要用 一个 div 把插入的包起来，然后做一个引用-->
+    <div #items_div class="imgs">
+        <ng-content></ng-content>
+    </div>
+    <!--click=go_left添加方法-->
+    <div class="button button1" (click)="go_left">
         <!--一个元素可以有多个 class,不用单独另起一个div-->
         <ion-icon name="chevron-back-outline" size="small"></ion-icon>
     </div>
-    <div class="button button2">
+    <div class="button button2" (click)="go_right">
         <ion-icon name="chevron-forward-outline" size="small"></ion-icon>
     </div>
 </div>
