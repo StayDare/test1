@@ -1,0 +1,9 @@
+<ion-card *ngIf="item">
+    <!--只有item值不为空时才显示card，item是card组件传入的参数-->
+    <img [src]="item.image" />
+    <ion-card-header>
+        <ion-card-title>{{item.price}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+    </ion-card-content>
+</ion-card>

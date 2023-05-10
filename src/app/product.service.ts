@@ -24,9 +24,26 @@ export class ProductService {
     return this.products; 
  } 
 
+//秒杀
  getSpecial(){
-  
+  //闭包语法：（参数） =>{代码}
+  //闭包要返回一个 bool 值，决定这个是否是精品
+   return (this.products.filter((product)=>{
+    if(product.special == true) 
+    return true;
+    else 
+    return false})//(product)里面是参数，参数就是你要判断的产品；{} 里面直接当函数内容写
+   )
+   /*相当于int a(){
+            return b();
+          }*/
  }
+ /*
+ 函数名 (参数)：返回类型 {
+    代码
+}
+*/ 
+//sells 是列表  sell是接口   sell[] 是接口们，一个列表
  getSells():sell[]{
   return this.sells;
  }
