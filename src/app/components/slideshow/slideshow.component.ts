@@ -11,8 +11,9 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 //class是类
 export class SlideshowComponent  implements OnInit {
-   current_index!: number;//表示当前图片的索引
+   current_index: number = 0;//表示当前图片的索引,默认设置第一张作为开始图
   //类里面就有一个 items 用来管理传入的图片
+  interval!: number;
   @ViewChild("items_div")//使用items_div
   items_div!: ElementRef<Element>;//表示声明变量,这个变量绝对不会为空
   items!: Element[]
@@ -32,11 +33,14 @@ export class SlideshowComponent  implements OnInit {
     this.switch(to);
   }
 
-  switch (to:number) {
-   // this.current_index = 0;//默认设置第一张作为开始图
+  switch (to:number) {  
     this.items[this.current_index].classList.remove('show');
     this.items[to].classList.add('show');
     this.current_index = to;
+  }
+//window.setInterval用在浏览器，setInterval用在服务器端（node） js可以用在服务器端（node）和浏览器端
+  loop(){
+    this.interval = window.setInterval(()=>{ this.go_right() },2000)
   }
   ngOnInit() {
   }
@@ -44,6 +48,7 @@ export class SlideshowComponent  implements OnInit {
     this.items = [].slice.call( this.items_div.nativeElement.children );
     this.items.forEach((item)=>{item.classList.add("item")});//每个 item 默认隐藏，并且位置绝对且重叠
     this.items[0].classList.add("show");//初始化之后要展示第一张轮播图.get返回有可能为空,加问号就相当于判断是否为空，不为空执行后面的
+    this.loop()
 }
 
 }
