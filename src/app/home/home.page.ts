@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { ProductService, product,sell} from '../product.service';
-import { IonContent, Platform } from '@ionic/angular';
+import { IonButton, IonContent, Platform } from '@ionic/angular';
 
 interface sellProduct{
   s:sell,
@@ -16,11 +16,11 @@ interface sellProduct{
 
 export class HomePage {
   @ViewChild(IonContent) content!: IonContent;
-  @ViewChild("sign") signbutton!: ElementRef<Element>;
+  hide = "hide";
   items:product[]
   sales: sell[];
   sellsWithProduct:sellProduct[] ;
-  state!: number;
+  state: number = 0;
   constructor(private productService:ProductService) {
     this.items = this.productService.getSpecial();
     this.sales = this.productService.getSells();
@@ -42,16 +42,16 @@ export class HomePage {
   //下划线不是驼峰命名法的规则，是 snakecase的规则
   buttonPressed(){
     if(this.state == 1){
-      this.signbutton.nativeElement.classList.add("hide");
+      this.hide = "hide"
       this.state = 0;
       this.scrollToTop();
     }
 //当前状态为0，函数里面是按下按钮调用 调用的时候 需要更新了让状态变成1 
     else if(this.state == 0){
-      this.signbutton.nativeElement.classList.remove("hide");
+      this.hide = ""
       this.state = 1;
       setTimeout(()=>{
-        this.signbutton.nativeElement.classList.add("hide");
+        this.hide = "hide"
         this.state = 0;
       },3000)
     }
