@@ -1,9 +1,23 @@
-<ion-card *ngIf="item">
-    <!--只有item值不为空时才显示card，item是card组件传入的参数-->
-    <img [src]="item.image" />
-    <ion-card-header>
-        <ion-card-title>{{item.price}}</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-    </ion-card-content>
+<ion-card *ngIf="item && sale">
+  <!--只有item值不为空时才显示card，item是card组件传入的参数-->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="5">
+        <img [src]="item.image" class="left image" />
+      </ion-col>
+      <ion-col>
+        <ion-card-header>
+          <ion-card-title>{{ item.name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <div class="count_down">24:24:24</div>
+          <div class="price old">{{ item.price }}</div>
+          <div class="price now">{{ sale.price }}</div>
+          <ion-button shape="round" fill="outline" size="small">
+            秒杀
+        </ion-button>
+        </ion-card-content>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-card>
