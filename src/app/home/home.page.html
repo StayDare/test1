@@ -58,7 +58,7 @@
         </ion-row>
     </ion-grid>
     <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-        <ion-fab-button size="small" (click)="buttonPressed()" #sign class="hide">
+        <ion-fab-button size="small" (click)="buttonPressed()" [ngClass]="hide">
             <ion-icon name="chevron-up"></ion-icon>
         </ion-fab-button>
     </ion-fab>
