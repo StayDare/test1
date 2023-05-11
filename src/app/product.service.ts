@@ -12,6 +12,7 @@ export interface product{
 export interface sell{
   id:number;
   price:number;
+  countDown:number;
 }
 @Injectable({
   providedIn: 'root'
@@ -62,9 +63,9 @@ export class ProductService {
 
   ] 
   this.sells =[
-    {id:6,price:7.2},
-    {id:7,price:4.88},
-    {id:8,price:6.00},
+    {id:6,price:7.2,countDown:1800},
+    {id:7,price:4.88,countDown:1800},
+    {id:8,price:6.00,countDown:1800},
 
   ]
 }
