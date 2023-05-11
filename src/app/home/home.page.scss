@@ -35,3 +35,7 @@ ion-card {
     width: 100% !important;
     margin: 0 !important;
 }
+
+.hide {
+    transform: translateX(100%); //向右移动 大小是自身宽度的100%
+}
