@@ -17,7 +17,7 @@ interface sellProduct{
 export class HomePage {
   @ViewChild(IonContent) content!: IonContent;
   hide = "hide";
-  items:product[]
+  items:product[];//列表
   sales: sell[];
   sellsWithProduct:sellProduct[] ;
   state: number = 0;

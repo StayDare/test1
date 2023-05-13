@@ -17,7 +17,7 @@
     <ion-grid>
         <ion-row>
             <ion-col>
-                <ion-title>精品推荐1</ion-title>
+                <ion-title>精品推荐</ion-title>
             </ion-col>
         </ion-row>
         <ion-row>
@@ -54,6 +54,26 @@
             <ion-col size="12" *ngFor="let t of sellsWithProduct ">
                 <!--准备参数,ngfor就相当于一个for循环-->
                 <app-sellcard [item]="t.p" [sale]="t.s"></app-sellcard>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-title>主题街</ion-title>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-50>
+                <img src="./assets/img/海底捞.jpg" />
+            </ion-col>
+            <ion-col>
+                <ion-row>
+                    <img src="./assets/img/必胜客.jpg" />
+                </ion-row>
+                <ion-row>
+                    <img src="./assets/img/coco.jpg" />
+                </ion-row>
             </ion-col>
         </ion-row>
     </ion-grid>

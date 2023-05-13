@@ -1,55 +1,55 @@
 .left {
-  max-width: 100%;
+    max-width: 100%;
 }
 
 img.image {
-  border-radius: 8px;
+    border-radius: 8px;
 }
 
 ion-card {
-  margin: 0;
+    margin: 0;
 }
 
 ion-card-title {
-  font-size: medium;
+    font-size: medium;
 }
 
 ion-card-header {
-  padding: 0;
+    padding: 0;
 }
 
 ion-col {
-  position: relative;
+    position: relative;
 }
 
 ion-card-content {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 0;
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  flex-flow: wrap;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: wrap;
 }
 
 .old {
-  text-decoration: line-through;
+    text-decoration: line-through;
 }
 
 .now {
-  color: red;
-  font-size: larger;
+    color: red;
+    font-size: larger;
 }
 
 .price {
-  position: relative;
-  margin: 0px 1px;
-  height: 100%;
-  display: inline-block;
+    position: relative;
+    margin: 0px 1px;
+    height: 100%;
+    display: inline-block;
 }
 
 .count_down {
-  width: 100%;
-  text-align: right;
+    width: 100%;
+    text-align: right;
 }

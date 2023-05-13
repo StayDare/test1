@@ -11,7 +11,7 @@ export class SellcardComponent  implements OnInit {
   @Input() item?:product;//一个卡片只处理单个产品,所以item不加s  item包含图片等信息
   time_str = "";
   countDown!: number ;
-  ngAterViewInit(){
+  ngAfterViewInit(){
     this.countDown = this.sale.countDown;
     setInterval(()=>{
       var hour = Math.floor(this.countDown / 3600);
@@ -19,6 +19,7 @@ export class SellcardComponent  implements OnInit {
       var second = this.countDown - hour * 3600 - minute * 60;
       var hourStr = hour < 10 ? "0" + hour : "" + hour;
       var minuteStr = minute < 10 ? "0" + minute : "" + minute;
+      
       var secondStr = second < 10 ? "0" + second : "" + second;
       this.time_str = hourStr + ":" + minuteStr + ":" + secondStr;
       this.countDown -=1;
