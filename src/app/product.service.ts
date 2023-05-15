@@ -82,12 +82,12 @@ getType(type:string){
     {id:14,name:"特色鲜椒鱼+米饭",image:"./assets/img/特色鲜椒鱼+米饭.jpg",price:17,type:"restaurant",special:false,shop:"盖浇饭"},
     {id:15,name:"豆干回锅肉盖饭",image:"./assets/img/豆干回锅肉.jpg",price:15,type:"restaurant",special:false,shop:"盖浇饭"},
     {id:16,name:"土豆红烧肉+米饭",image:"./assets/img/土豆红烧肉+米饭.jpg",price:18,type:"restaurant",special:false,shop:"盖浇饭"},
-    {id:17,name:"黑椒肉肠饭",image:"./assets/img/黑胶肉肠饭.jpg",price:12,type:"restaurant",special:false,shop:"牧童烤鸭饭"},
-    {id:18,name:"烧白套饭",image:"./assets/img/烧白套饭.jpg",price:14,type:"restaurant",special:false,shop:"牧童烤鸭饭"},
-    {id:19,name:"重庆辣子鸡套餐",image:"./assets/img/重庆辣子鸡.jpg",price:14,type:"restaurant",special:false,shop:"牧童烤鸭饭"},
-    {id:20,name:"爆椒鸡丁套饭",image:"./assets/img/爆椒鸡丁.jpg",price:13,type:"restaurant",special:false,shop:"牧童烤鸭饭"},
-    {id:21,name:"黑椒里脊套饭",image:"./assets/img/黑椒里脊.jpg",price:12,type:"restaurant",special:false,shop:"牧童烤鸭饭"},
-    {id:22,name:"里脊拼鱼香肉丝",image:"./assets/img/里脊拼鱼香肉丝.jpg",price:15,type:"restaurant",special:false,shop:"牧童烤鸭饭"},
+    {id:17,name:"黑椒肉肠饭",image:"./assets/img/黑胶肉肠饭.jpg",price:12,type:"restaurant",special:false,shop:"套餐饭"},
+    {id:18,name:"烧白套饭",image:"./assets/img/烧白套饭.jpg",price:14,type:"restaurant",special:false,shop:"套餐饭"},
+    {id:19,name:"重庆辣子鸡套餐",image:"./assets/img/重庆辣子鸡.jpg",price:14,type:"restaurant",special:false,shop:"套餐饭"},
+    {id:20,name:"爆椒鸡丁套饭",image:"./assets/img/爆椒鸡丁.jpg",price:13,type:"restaurant",special:false,shop:"套餐饭"},
+    {id:21,name:"黑椒里脊套饭",image:"./assets/img/黑椒里脊.jpg",price:12,type:"restaurant",special:false,shop:"套餐饭"},
+    {id:22,name:"里脊拼鱼香肉丝",image:"./assets/img/里脊拼鱼香肉丝.jpg",price:15,type:"restaurant",special:false,shop:"套餐饭"},
     {id:23,name:"海鲜铁板炒饭",image:"./assets/img/海鲜铁板.jpg",price:17,type:"restaurant",special:false,shop:"海鲜炒饭"},
     {id:24,name:"香辣口味虾仁铁板炒饭",image:"./assets/img/虾仁铁板.jpg",price:14.5,type:"restaurant",special:false,shop:"海鲜炒饭"},
     {id:25,name:"肉宴海鲜铁板炒饭",image:"./assets/img/肉宴海鲜.jpg",price:17,type:"restaurant",special:false,shop:"海鲜炒饭"},
@@ -99,7 +99,18 @@ getType(type:string){
     {id:31,name:"猪脚饭",image:"./assets/img/猪脚饭.jpg",price:17,type:"restaurant",special:false,shop:"猪脚饭"},
     {id:32,name:"葱油肉拌面",image:"./assets/img/葱油.jpg",price:13,type:"restaurant",special:false,shop:"葱油拌面"},
     {id:33,name:"孜然牛肉炒饭",image:"./assets/img/牛肉炒饭.jpg",price:13,type:"restaurant",special:false,shop:"炒饭"},
-    {id:33,name:"牛肉刀削汤面",image:"./assets/img/牛肉面.jpg",price:10,type:"restaurant",special:false,shop:"牛肉面"},
+    {id:34,name:"芝士奶盖四季春",image:"./assets/img/芝士奶盖.jpg",price:8,type:"milkytea",special:false,shop:"蜜雪冰城"},
+    {id:35,name:"韩式无骨炸鸡",image:"./assets/img/无骨炸鸡.jpg",price:6,type:"fastfood",special:false,shop:"炸鸡"},
+    {id:36,name:"牛肉刀削汤面",image:"./assets/img/牛肉面.jpg",price:10,type:"restaurant",special:false,shop:"牛肉面"},
+    {id:37,name:"港版杨枝甘露",image:"./assets/img/杨枝甘露.jpg",price:7,type:"milkytea",special:false,shop:"蜜雪冰城"},
+    {id:38,name:"奥利奥雪王大圣代",image:"./assets/img/奥利奥圣代.jpg",price:5,type:"milkytea",special:false,shop:"蜜雪冰城"},
+    {id:39,name:"薯条（大）",image:"./assets/img/薯条.jpg",price:8,type:"fastfood",special:false,shop:"薯条"},
+    {id:40,name:"甄选套餐A",image:"./assets/img/套餐a.jpg",price:17,type:"fastfood",special:false,shop:"汉堡"},
+    {id:41,name:"黄焖鸡米饭",image:"./assets/img/黄焖鸡.jpg",price:16,type:"restaurant",special:false,shop:"黄焖鸡"},
+
+
+
+
   ] 
   this.sells =[
     {id:6,price:7.2,countDown:1800},
