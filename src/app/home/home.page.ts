@@ -21,9 +21,11 @@ export class HomePage {
   sales: sell[];
   sellsWithProduct:sellProduct[] ;
   state: number = 0;
+  advise:product[];
   constructor(private productService:ProductService) {
     this.items = this.productService.getSpecial();
     this.sales = this.productService.getSells();
+    this.advise = this.productService.getList();
     var a :sellProduct[] =[];
     var b = this.productService.getProducts();//获取所有产品
     this.sales.forEach((message)=>{//foreach 闭包参数 是一个单条秒杀信息

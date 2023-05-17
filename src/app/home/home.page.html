@@ -80,11 +80,17 @@
     <ion-grid>
         <ion-row>
             <ion-col>
-                <ion-title>精品外卖推荐</ion-title>
+                <ion-title>精品外卖列表</ion-title>
             </ion-col>
         </ion-row>
         <ion-row>
-
+            <ion-col>
+                <ion-list>
+                    <ion-item *ngFor="let i of advise">
+                        <ion-label> {{i.name}}</ion-label>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
         </ion-row>
     </ion-grid>
     <ion-fab slot="fixed" vertical="bottom" horizontal="end">
