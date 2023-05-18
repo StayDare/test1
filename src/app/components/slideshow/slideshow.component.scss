@@ -28,7 +28,7 @@ ion-icon {
 }
 
 //items轮播图所有图片，item具体到某一图片
-::ng-deep .item  {
+::ng-deep .slideitem  {
     display: none;
     position: absolute;
     width: 100%;
