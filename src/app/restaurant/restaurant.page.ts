@@ -10,12 +10,21 @@ import { ProductService, product} from '../product.service';
 export class RestaurantPage implements OnInit {
   allProducts!:product[];//所有中餐产品
   showProducts!:product[];//当前展示产品
+  presentShop!:string;
+  //constructor相当于初始化
   constructor(private productService:ProductService) { 
-    this.allProducts = this.productService.getProducts();
-    this.showProducts = this.productService.getProducts();
+    this.allProducts = this.productService.getType("restaurant");
+    this.showProducts = this.productService.getType("restaurant");
 
   }
-   
+  getShowShop(shop:string){
+    this.showProducts =this.productService.getShop("restaurant",shop);
+  }
+  //切换，用户点击目录的按钮
+  switch(shop:string){
+
+  }
+
   ngOnInit() {
   }
 

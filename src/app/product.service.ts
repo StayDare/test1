@@ -25,13 +25,18 @@ export class ProductService {
 //定义函数
   getProducts():product[]{ 
     return this.products; 
- } //获取某一店铺的产品
+ } 
+ //获取某一店铺的产品
 getShop(type:string,shop:string){
-
+  return(this.getType(type).filter((product)=>{
+    if(product.shop == shop)
+    return true;
+    else
+    return false;
+  }))
 }
 //获取某一类产品
 getType(type:string){
-
   return(this.products.filter((product)=>{
     if(product.type == type)  //用产品的type和传入的type对比
     return true;
@@ -94,11 +99,9 @@ getList(){
     {id:11,name:"青椒肉丝盖饭",image:"./assets/img/青椒肉丝盖饭.jpg",price:14,type:"restaurant",special:false,shop:"盖浇饭",list:false},
     {id:12,name:"肉沫茄子盖饭",image:"./assets/img/肉沫茄子盖饭.jpg",price:13,type:"restaurant",special:false,shop:"盖浇饭",list:false},
     {id:13,name:"蒜苔肉丝盖饭",image:"./assets/img/蒜苔肉丝盖饭.jpg",price:15,type:"restaurant",special:false,shop:"盖浇饭",list:false},
-    {id:14,name:"特色鲜椒鱼+米饭",image:"./assets/img/特色鲜椒鱼+米饭.jpg",price:17,type:"restaurant",special:false,shop:"盖浇饭",list:false},
+    {id:14,name:"特色鲜椒鱼+米饭",image:"./assets/img/特色鲜椒鱼+米饭.jpg",price:17,type:"restaurant",special:false,shop:"套餐饭",list:false},
     {id:15,name:"豆干回锅肉盖饭",image:"./assets/img/豆干回锅肉.jpg",price:15,type:"restaurant",special:false,shop:"盖浇饭",list:false},
-    {id:16,name:"土豆红烧肉+米饭",image:"./assets/img/土豆红烧肉+米饭.jpg",price:18,type:"restaurant",special:false,shop:"盖浇饭",list:false},
-    {id:17,name:"黑椒肉肠饭",image:"./assets/img/黑胶肉肠饭.jpg",price:12,type:"restaurant",special:false,shop:"套餐饭",list:false},
-    {id:18,name:"烧白套饭",image:"./assets/img/烧白套饭.jpg",price:14,type:"restaurant",special:false,shop:"套餐饭",list:false},
+    {id:16,name:"土豆红烧肉+米饭",image:"./assets/img/土豆红烧肉+米饭.jpg",price:18,type:"restaurant",special:false,shop:"套餐饭",list:false},
     {id:19,name:"重庆辣子鸡套餐",image:"./assets/img/重庆辣子鸡.jpg",price:14,type:"restaurant",special:false,shop:"套餐饭",list:false},
     {id:20,name:"爆椒鸡丁套饭",image:"./assets/img/爆椒鸡丁.jpg",price:13,type:"restaurant",special:false,shop:"套餐饭",list:false},
     {id:21,name:"黑椒里脊套饭",image:"./assets/img/黑椒里脊.jpg",price:12,type:"restaurant",special:false,shop:"套餐饭",list:false},
@@ -109,8 +112,6 @@ getList(){
     {id:26,name:"蒜蓉粉丝扇贝铁板炒饭",image:"./assets/img/蒜蓉粉丝.jpg",price:18,type:"restaurant",special:false,shop:"海鲜炒饭",list:false},
     {id:27,name:"炭烧鱿鱼须铁板炒饭",image:"./assets/img/鱿鱼须.jpg",price:15,type:"restaurant",special:false,shop:"海鲜炒饭",list:false},
     {id:28,name:"海虾鱿鱼铁板炒饭",image:"./assets/img/海虾鱿鱼.jpg",price:22,type:"restaurant",special:false,shop:"海鲜炒饭",list:false},
-    {id:29,name:"滑蛋虾仁菠萝炒饭",image:"./assets/img/滑蛋菠萝.jpg",price:15,type:"restaurant",special:false,shop:"海鲜炒饭",list:false},
-    {id:30,name:"海鲜菠萝炒饭",image:"./assets/img/海鲜菠萝.jpg",price:17,type:"restaurant",special:false,shop:"海鲜炒饭",list:false},
     {id:31,name:"猪脚饭",image:"./assets/img/猪脚饭.jpg",price:17,type:"restaurant",special:false,shop:"猪脚饭",list:true},
     {id:32,name:"葱油肉拌面",image:"./assets/img/葱油.jpg",price:13,type:"restaurant",special:false,shop:"葱油拌面",list:true},
     {id:33,name:"孜然牛肉炒饭",image:"./assets/img/牛肉炒饭.jpg",price:13,type:"restaurant",special:false,shop:"炒饭",list:true},

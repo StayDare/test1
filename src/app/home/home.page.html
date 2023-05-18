@@ -87,6 +87,8 @@
             <ion-col>
                 <ion-list>
                     <ion-item *ngFor="let i of advise">
+                        <ion-thumbnail slot="start">
+                            <img [src]="i.image" /></ion-thumbnail>
                         <ion-label> {{i.name}}</ion-label>
                     </ion-item>
                 </ion-list>

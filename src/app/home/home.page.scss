@@ -23,11 +23,6 @@
     text-decoration: none;
 }
 
-ion-card-title {
-    font-size: 17px;
-    text-align: center;
-}
-
 ion-card {
     background-color: antiquewhite;
     display: flex;
@@ -42,4 +37,8 @@ ion-card {
 
 ion-fab-button {
     transition: transform 0.5s
+}
+
+img {
+    height: 100%;
 }
