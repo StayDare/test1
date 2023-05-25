@@ -82,6 +82,15 @@ getList(){
  getSells():sell[]{
   return this.sells;
  }
+//获取产品id
+ getById(id:number){
+  return(this.products.find((product)=>{
+     if(product.id == id)
+    return true;
+    else
+    return false;
+  }))
+ }
 //构造函数，一个类只能有一个
  constructor() { 
   this.products = [
