@@ -5,12 +5,13 @@ import { CardComponent } from './card/card.component';//将card组件导入(导�
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { IonicModule } from '@ionic/angular';
 import { SellcardComponent } from './sellcard/sellcard.component';
-
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [CardComponent,SlideshowComponent,SellcardComponent],//是个列表，加进去成为列表的一个值
   imports: [
     IonicModule,
     CommonModule,
+    RouterModule
   ],//imports 是用来导入其他 ngmodule的
   exports:[CardComponent,SlideshowComponent,SellcardComponent]
 })

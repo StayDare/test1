@@ -1,4 +1,4 @@
-<a *ngIf="item" [href]="clicksrc">
+<a *ngIf="item" [routerLink]="clicksrc">
     <ion-card>
         <!--只有item值不为空时才显示card，item是card组件传入的参数-->
         <img [src]="item.image" />

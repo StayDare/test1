@@ -7,7 +7,7 @@
 <ion-content [fullscreen]="true">
     <ion-header collapse="condense">
         <ion-toolbar>
-            <ion-button color="light">
+            <ion-button color="light" (click)="goback()">
                 <ion-icon name="arrow-back-outline"></ion-icon>
             </ion-button>
             <ion-title>商品详情页</ion-title>
@@ -17,9 +17,11 @@
         <ion-row>
             <ion-col>
                 <app-slideshow>
-                    <img src="./assets/img/扬州炒饭.jpg" />
-                    <img src="./assets/img/螺蛳粉.jpg" />
-                    <img src="./assets/img/土豆丝.jpg" />
+                    <img src="./assets/img/chaomifen.jpg" />
+                    <img src="./assets/img/新疆炒米粉.jpg" />
+                    <img src="./assets/img/炒米粉 (1).jpg" />
+                    <img src="./assets/img/炒米粉 (2).jpg" />
+
                 </app-slideshow>
             </ion-col>
         </ion-row>
@@ -43,11 +45,11 @@
         </ion-row>
         <ion-row>
             <ion-col class="timu" size="2">数量</ion-col>
-            <ion-button color="light" size="small" (onclick)="setChange('remove')">
+            <ion-button color="light" size="small" (click)="setChange('remove')">
                 <ion-icon name="remove-outline"></ion-icon>
             </ion-button>
             <ion-col size="2" class="number">{{change}}</ion-col>
-            <ion-button color="light" size="small" (onclick)="setChange('add')">
+            <ion-button color="light" size="small" (click)="setChange('add')">
                 <ion-icon name="add-outline"></ion-icon>
             </ion-button>
         </ion-row>
